@@ -25,7 +25,155 @@ blah, blah, blah, blah
 
    <head> 
       
-	   PUT YOUR OLD CODE IN HERE
+	    <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+        var allergy_count = 0;
+        var cold_count = 0;
+
+
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+
+        }
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        }
+        
+        function setResults(){
+        	var resultText = document.getElementById("results");
+        	var allergyPercent = allergy_count / 4.0 * 100;
+        	var coldPercent = cold_count / 4.0 * 100;
+        	resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%<br> Probability it is a cold = " + coldPercent + "%"; 
+        }
+
+  </script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<!-- saved the fork as a file on my laptop and downloaded a text editing app to allow me to change the HTML of the website !-->
+<!-- added in question one content to replace "put question one here" !-->
+<!-- added two buttons, one for yes and one for no to page one using the instructions !-->
+<!-- read through the Javascript manual in order to learn how to add command !-->
+<!-- added the <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> in order to calculate responses !-->
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>Are your eyes watery or itchy?</p>    
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+
+    </div>
+</div>
+<!-- followed the same steps as above for question two !-->
+<!-- replaced question 2 templeate with "do you have a fever !-->
+<!-- switched the onclick="coldAdd();" and the onclick="allergyAdd();" to make sure that the responses were calculated correctly based on the question !-->
+<div class="page" id="two">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a fever?</p>    
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+
+    </div>
+</div>
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+<!-- followed the same steps as above for question three !-->
+<!-- replaced question 3 templeate with "do you have a sore throat?" !-->
+<!-- switched the onclick="coldAdd();" and the onclick="allergyAdd();" to make sure that the responses were calculated correctly based on the question !-->
+		<h1>Question 3</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>    
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+
+    </div>
+</div>
+<div class="page" id="four">
+<!-- followed the same steps as above for question four !-->
+<!-- replaced question 4 template with "are your symptoms seasonal or chronic" !-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p>    
+		<a href="#result"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#result"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+<!-- read the instructions about creating a results page and followed the guidlines in order to create a page that accurately calculates percentages !-->
+<!-- tested the website on the file that I had saved in order to make sure that it was working properly and the right numbers were being calculated !-->
+<!-- I am currently attempting to publish the file on github and make it viewable to all. !-->
+    </div>
+</div>
+<div class="page" id="result">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+    	<a onclick="setResults();" class="w3-btn w3-black">Find Results</a>
+		<p id="results"></p>    
+
+    </div>
+</div>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
 	   
    </body>
 </html>
