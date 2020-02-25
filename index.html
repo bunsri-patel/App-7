@@ -51,7 +51,7 @@ blah, blah, blah, blah
         	var resultText = document.getElementById("results");
         	var allergyPercent = allergy_count / 4.0 * 100;
         	var coldPercent = cold_count / 4.0 * 100;
-        	resultText.innerHTML = "Probability it is appendicitis = " + allergyPercent + "%<br> Probability it is a other causes = " + coldPercent + "%"; 
+        	resultText.innerHTML = "Probability it is appendicitis = " + allergyPercent + "%<br> Probability it is other causes = " + coldPercent + "%"; 
         }
 
   </script>
@@ -106,7 +106,7 @@ blah, blah, blah, blah
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>Are your eyes watery or itchy?</p>    
+		<p>Is the pain located in the lower right side?</p>    
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
@@ -122,8 +122,8 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>    
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>
@@ -136,9 +136,9 @@ blah, blah, blah, blah
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>    
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<p>Have you experienced any nausea or vomiting?</p>    
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>
@@ -150,7 +150,7 @@ blah, blah, blah, blah
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p>    
+		<p>Does the pain get worse when you jump?</p>    
 		<a href="#result"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#result"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 <!-- read the instructions about creating a results page and followed the guidlines in order to create a page that accurately calculates percentages !-->
