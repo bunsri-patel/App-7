@@ -33,6 +33,8 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
    </head> 
 
 <!-- decided to have my results display either appendicitis or other causes !-->
+<!-- copied and pasted my old code from app 3 into here !-->
+<!-- decided to leave allergy and cold count and just change the words in the parenthesis to make sure that they showed appendicitis and other causes !-->
 <script>
         var allergy_count = 0;
         var cold_count = 0;
@@ -56,8 +58,10 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 
   </script>
 
-
-
+<!-- Had to add the resize option to make sure that the image fit different platforms (phone vs computer) !-->
+<!-- tested out the website on the computer and it worked!-->
+<!-- tested out the website on my phone and the image wasn't properly sized !-->
+<!-- changed the image proportions multiple times until the image looked good on my phone!-->
 <style>	
 .body {
      margin: 0em;
@@ -103,9 +107,8 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 <img src="https://www.choc.org/wp/wp-content/uploads/2014/12/Oct-stomachaches.jpg"
      alt="appendicitis" width400 height400>
 <!-- saved the fork as a file on my laptop and downloaded a text editing app to allow me to change the HTML of the website !-->
-<!-- added in question one content to replace "put question one here" !-->
-<!-- added two buttons, one for yes and one for no to page one using the instructions !-->
-<!-- read through the Javascript manual in order to learn how to add command !-->
+<!-- changed the question to one that I made for my appendicitis vs other causes diagnostic !-->
+<!-- changed the previous question to is the pain located on the lower right side? !-->
 <!-- added the <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> in order to calculate responses !-->
 <div class="page" id="one">
@@ -138,7 +141,7 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 <!-- followed the same steps as above for question three !-->
-<!-- replaced question 3 templeate with "do you have a sore throat?" !-->
+<!-- replaced question 3 with have you experienced any nausea or vomiting!-->
 <!-- switched the onclick="coldAdd();" and the onclick="allergyAdd();" to make sure that the responses were calculated correctly based on the question !-->
 		<h1>Question 3</h1>
 	</div>
@@ -152,7 +155,7 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 </div>
 <div class="page" id="four">
 <!-- followed the same steps as above for question four !-->
-<!-- replaced question 4 template with "are your symptoms seasonal or chronic" !-->
+<!-- replaced question 4 with "does the pain get worse when you jump" !-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -161,9 +164,9 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 		<p>Does the pain get worse when you jump?</p>    
 		<a href="#result"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#result"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-<!-- read the instructions about creating a results page and followed the guidlines in order to create a page that accurately calculates percentages !-->
+<!-- calculated the percentages and made sure that my results were displaying properly and that the proper results percentages were being calculated !-->
 <!-- tested the website on the file that I had saved in order to make sure that it was working properly and the right numbers were being calculated !-->
-<!-- I am currently attempting to publish the file on github and make it viewable to all. !-->
+	    
     </div>
 </div>
 <div class="page" id="result">
