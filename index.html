@@ -32,14 +32,14 @@ blah, blah, blah, blah
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-<!-- decided to have my results display either appendicitis or other (because I could only choose a result that was one word) !-->
+<!-- decided to have my results display either appendicitis or other causes !-->
 <script>
-        var appendicitis_count = 0;
-        var other_count = 0;
+        var allergy_count = 0;
+        var cold_count = 0;
 
 
         function allergyAdd(){
-            appendicitis_count = appendicitis_count + 1;
+            allergy_count = allergy_count + 1;
 
         }
 
@@ -51,7 +51,7 @@ blah, blah, blah, blah
         	var resultText = document.getElementById("results");
         	var allergyPercent = allergy_count / 4.0 * 100;
         	var coldPercent = cold_count / 4.0 * 100;
-        	resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%<br> Probability it is a cold = " + coldPercent + "%"; 
+        	resultText.innerHTML = "Probability it is appendicitis = " + allergyPercent + "%<br> Probability it is a other causes = " + coldPercent + "%"; 
         }
 
   </script>
@@ -86,7 +86,7 @@ blah, blah, blah, blah
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have stomach pain caused by appendicitis but wonder if it is other causes. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
