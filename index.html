@@ -38,8 +38,15 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+	var flu_count = 0; 
+	var covid_count = 0;
 
-
+	function coldflucovidAdd() {
+		cold_count =+ 1; 
+		flu_count =+ 1;
+		covid_count =+ 1;
+	}
+	
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
@@ -51,8 +58,10 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
         
         function setResults(){
         	var resultText = document.getElementById("results");
-        	var allergyPercent = allergy_count / 4.0 * 100;
-        	var coldPercent = cold_count / 4.0 * 100;
+        	var allergyPercent = allergy_count / 11.0 * 100;
+        	var coldPercent = cold_count / 11.0 * 100;
+		var fluPercent = flu_count / 11.0 * 100;
+		var covidPercent = covid_count / 11.0 * 100;
         	resultText.innerHTML = "Probability it is appendicitis = " + allergyPercent + "%<br> Probability it is other causes = " + coldPercent + "%"; 
         }
 
