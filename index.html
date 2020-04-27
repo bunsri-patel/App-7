@@ -113,11 +113,11 @@ img, object{
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 <img src="https://www.choc.org/wp/wp-content/uploads/2014/12/Oct-stomachaches.jpg"
      alt="appendicitis" width400 height400>
-<!-- saved the fork as a file on my laptop and downloaded a text editing app to allow me to change the HTML of the website !-->
-<!-- changed the question to one that I made for my appendicitis vs other causes diagnostic !-->
-<!-- changed the previous question to is the pain located on the lower right side? !-->
-<!-- added the <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> in order to calculate responses !-->
+	
+<!-- changed the question to ask "How long have you had symptoms?" !-->
+<!-- Added two more buttons and assigned responses to each button that correspond with the illness !-->
+<!-- Renamed the responses to add to their respective categories (cold, allergy, flu etc.) !-->
+<!-- committed changes and went to see the website, and everything was looking normal/ the buttons worked !-->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -125,10 +125,10 @@ img, object{
 	
     <div id="content" class="w3-container">
 		<p>How long have you had symptoms?</p>    
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> 7-25 days</a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">Less than 14 days</a>
-	     <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">Several weeks</a>
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
 
     </div>
 </div>
@@ -176,6 +176,104 @@ img, object{
 <!-- calculated the percentages and made sure that my results were displaying properly and that the proper results percentages were being calculated !-->
 <!-- tested the website on the file that I had saved in order to make sure that it was working properly and the right numbers were being calculated !-->
 	    
+    </div>
+</div>
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>How long have you had symptoms?</p>    
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+
+    </div>
+</div>
+<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>How long have you had symptoms?</p>    
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+
+    </div>
+</div>	
+<div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 7</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>How long have you had symptoms?</p>    
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+
+    </div>
+</div>	
+<div class="page" id="eight">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 8</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>How long have you had symptoms?</p>    
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+
+    </div>
+</div>
+<div class="page" id="nine">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>How long have you had symptoms?</p>    
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+
+    </div>
+</div>
+<div class="page" id="ten">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 10</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>How long have you had symptoms?</p>    
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+
+    </div>
+</div>
+<div class="page" id="eleven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 11</h1>
+	</div>
+	
+    <div id="content" class="w3-container">
+		<p>How long have you had symptoms?</p>    
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+
     </div>
 </div>
 <div class="page" id="result">
