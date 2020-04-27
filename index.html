@@ -47,6 +47,22 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 		covid_count =+ 1;
 	}
 	
+	function allergyflucovidAdd() { 
+		flu_count =+ 1;
+		covid_count =+ 1;
+		allergy_count =+ 1;
+	}
+	
+	function allergycoldAdd() { 
+		allergy_count =+ 1;
+		cold_count =+ 1;
+	}
+	
+	function flucovidAdd() { 
+		flu_count =+ 1;
+		covid_count =+ 1;
+	}
+	
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
@@ -55,7 +71,14 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-        
+	
+	 function covidAdd(){
+            covid_count = covid_count + 1;
+        }
+	
+         function fluAdd(){
+            flu_count = flu_count + 1;
+        }
         function setResults(){
         	var resultText = document.getElementById("results");
         	var allergyPercent = allergy_count / 11.0 * 100;
@@ -126,9 +149,9 @@ img, object{
     <div id="content" class="w3-container">
 		<p>How long have you had symptoms?</p>    
 		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+       		<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+	    	<a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
 
     </div>
 </div>
@@ -141,9 +164,11 @@ img, object{
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>    
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you have a Cough? If so, how would you describe it?</p>    
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No cough</a>
+        	<a href="#three"  onclick="flucovidAdd();" class="w3-btn w3-black">severe, dry cough</a>
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Mild cough</a>
+	
 
     </div>
 </div>
@@ -156,9 +181,9 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>Have you experienced any nausea or vomiting?</p>    
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<p>Are you experiencing shortness of breath?</p>    
+		<a href="#four"  onclick="covidAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#four"  onclick="allergyflucovidAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>
@@ -170,7 +195,7 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>Does the pain get worse when you jump?</p>    
+		<p>Are you sneezing?</p>    
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 <!-- calculated the percentages and made sure that my results were displaying properly and that the proper results percentages were being calculated !-->
