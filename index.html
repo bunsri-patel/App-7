@@ -47,6 +47,18 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 		covid_count =+ 1;
 	}
 	
+	function allergycoldcovidAdd() {
+		cold_count =+ 1; 
+		allergy_count =+ 1;
+		covid_count =+ 1;
+	}
+	
+	function coldfluallergyAdd() {
+		cold_count =+ 1; 
+		flu_count =+ 1;
+		allergy_count =+ 1;
+	}
+	
 	function allergyflucovidAdd() { 
 		flu_count =+ 1;
 		covid_count =+ 1;
@@ -58,14 +70,28 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 		cold_count =+ 1;
 	}
 	
+	function allergycovidAdd() { 
+		allergy_count =+ 1;
+		covid_count =+ 1;
+	}
+	
+	function coldcovidAdd() { 
+		covid_count =+ 1;
+		cold_count =+ 1;
+	}
+	
 	function flucovidAdd() { 
 		flu_count =+ 1;
 		covid_count =+ 1;
 	}
 	
+	function coldfluAdd() { 
+		cold_count =+ 1;
+		flu_count =+ 1;
+	}
+	
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-
         }
 
         function coldAdd(){
@@ -210,11 +236,9 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>How long have you had symptoms?</p>    
-		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#six"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#six"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+		<p>Do you have a runny or stuffy nose?</p>    
+		<a href="#six"  onclick="coldfluallergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#six"  onclick="covidAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>
@@ -225,11 +249,10 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>How long have you had symptoms?</p>    
-		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#seven"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#seven"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+		<p>Do you have a sore throat? If so, how severe?</p>    
+		<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes, mild</a>
+        <a href="#seven"  onclick="coldflucovidAdd();" class="w3-btn w3-black">Yes, severe</a>
+	     <a href="#seven"  onclick="allergyflucovidAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>	
@@ -240,11 +263,10 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>How long have you had symptoms?</p>    
-		<a href="#eight"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#eight"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#eight"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+		<p>Do you have a fever? If yes, is it persistent?</p>    
+		<a href="#eight"  onclick="flucovidAdd();" class="w3-btn w3-black"> Yes, persistent</a>
+        <a href="#eight"  onclick="coldAdd();" class="w3-btn w3-black">Yes, not persistent</a>
+	     <a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>	
@@ -255,11 +277,10 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>How long have you had symptoms?</p>    
-		<a href="#nine"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#nine"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#nine"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#nine"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+		<p>Do you feel tired or weak? If so is this fatigue persistent?</p>    
+		<a href="#nine"  onclick="fluAdd();" class="w3-btn w3-black"> Yes, persistent</a>
+        <a href="#nine"  onclick="allergycoldcovidAdd();" class="w3-btn w3-black">Yes, not persistent</a>
+	     <a href="#nine"  onclick="allergycoldcovidAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>
@@ -269,11 +290,10 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>How long have you had symptoms?</p>    
-		<a href="#ten"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#ten"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#ten"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#ten"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+		<p>Do you get headaches? If so, are they persistent?</p>    
+		<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-black"> Yes, persistent</a>
+        <a href="#ten"  onclick="coldcovidAdd();" class="w3-btn w3-black">Yes, not persistent</a>
+	     <a href="#ten"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>
@@ -284,12 +304,11 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>How long have you had symptoms?</p>    
-		<a href="#eleven"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#eleven"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#eleven"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#eleven"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
-
+		<p>Are you experiencing body aches or pains? If yes, are they severe? </p>    
+		<a href="#eleven"  onclick="coldfluAdd();" class="w3-btn w3-black"> Yes, severe</a>
+        <a href="#eleven"  onclick="covidAdd();" class="w3-btn w3-black">Yes, not too severe</a>
+	     <a href="#eleven"  onclick="allergycovidAdd();" class="w3-btn w3-black">No</a>
+	   
     </div>
 </div>
 	
@@ -299,11 +318,10 @@ img, object{
 	</div>
 	
     <div id="content" class="w3-container">
-		<p>How long have you had symptoms?</p>    
-		<a href="#result"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#result"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-	     <a href="#result"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a>
-	     <a href="#result"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+		<p>Do you have diarrhea? If so, are you a child or an adult? </p>    
+		<a href="#result"  onclick="covidAdd();" class="w3-btn w3-black"> Yes, Adult</a>
+        <a href="#result"  onclick="fluAdd();" class="w3-btn w3-black">Yes, Child</a>
+	     <a href="#result"  onclick="allergycoldAdd();" class="w3-btn w3-black">No</a>
 
     </div>
 </div>
