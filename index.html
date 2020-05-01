@@ -22,10 +22,11 @@ To help the user insert their symptoms and determine the liklihood of having all
 Known Issues:
 Rounding the results values to the nearest whole number. Inserting the pie chart on the results page. 
 -->
-
+	
+<!-- changed the title from Hello World to "Allergies, Cold, Flu, or COVID-19" !-->
    <head> 
       
-	    <title>Hello World</title>  
+	    <title>Allergies,Cold, Flu, or COVID-19</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -343,7 +344,40 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
 	
     <div id="content" class="w3-container">
     	<a onclick="setResults();" class="w3-btn w3-black">Find Results</a>
-		<p id="results"></p>    
+		<p id="results"></p>  
+	
+<!-- THIS IS MY PLAN FOR THE RESULTS PAGE:
+I tried to display the results using a pie chart, however I could not get the code to work, and found it very difficult to link the results percentages to the chart.
+After many failed attempts, I have decided to insert the code below to allow you to see my plan. This is code that I found on the 
+internet, and I modified parts of it in attempts to get the pie chart to display. I believe that my problem is that I do not understand
+which sections of the code the different aspects of the pie chart go to, and I cannot figure out how to draw upon previous functions to 
+display the pie chart on the final page. As of right now, you can only see the results displayed as percentages on the results page. 
+If all had worked out, there would have been a colorful pie chart that displayed the probability that the user had each of the diagnoses 
+(Allergy, Cold, Flu, COVID-19)as a section on the chart. The titles of each section and their respective percentages would have also been displayed. 
+
+anychart.onDocumentReady(function() {
+
+  var data = [
+      {x: "Allergies", value: allergyPercent},
+      {x: "Cold", value: coldPercent},
+      {x: "Flu", value: fluPercent},
+      {x: "COVID-19", value: covidPercent},
+  ];
+
+  // create the chart
+  var chart = anychart.pie();
+
+  // set the chart title
+  chart.title("Population by Race for the United States: 2010 Census");
+
+  // add the data
+  chart.data(data);
+
+  // display the chart in the container
+  chart.container('container');
+  chart.draw();
+
+}); !--> 
 
     </div>
 </div>
@@ -351,7 +385,7 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
-<!-- Followed the steps above for question 7 !-->
+
 	   
    </body>
 </html>
