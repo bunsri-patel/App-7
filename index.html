@@ -35,58 +35,67 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
 <!-- updated the description of Goal of Code !-->
 <!-- Created a Copy of the App 4 repository and renamed it App 7 !-->
 <!-- Added two more Var functions below: one for flu count and one for covid count and set them both to 0 !-->
-// hi
+	
         var allergy_count = 0;
         var cold_count = 0;
 	var flu_count = 0; 
 	var covid_count = 0;
 
-	
-	
+<!-- Added functions that add to the initial counts for answer choices that are linked to multiple diagnoses !-->	
+<!-- function to count for cold, flu, and covid !-->
+<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->
 	function coldflucovidAdd() {
 		cold_count = cold_count + 0.33; 
 		flu_count = flu_count + 0.33;
 		covid_count = covid_count + 0.33;
 	}
-	
+<!-- function to count for cold, allergy, and covid !-->
+<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->
 	function allergycoldcovidAdd() {
 		cold_count = cold_count + 0.33; 
 		allergy_count = allergy_count + 0.33;
 		covid_count = covid_count + 0.33;
 	}
-	
+<!-- function to count for cold, flu, and allergy !-->
+<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->	
 	function coldfluallergyAdd() {
 		cold_count = cold_count + 0.33; 
 		flu_count = flu_count + 0.33;
 		allergy_count = allergy_count + 0.33;
 	}
-	
+<!-- function to count for flu, allergy, and covid !-->
+<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->	
 	function allergyflucovidAdd() { 
 		flu_count = flu_count + 0.33;
 		covid_count = covid_count + 0.33;
 		allergy_count = allergy_count + 0.33;
 	}
-	
+<!-- function to count for cold and allergy!-->
+<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->	
 	function allergycoldAdd() { 
 		allergy_count = allergy_court + 0.5;
 		cold_count = cold_count + 0.5;
 	}
-	
+<!-- function to count for covid and allergy!-->
+<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->		
 	function allergycovidAdd() { 
 		allergy_count = allergy_count + 0.5;
 		covid_count = covid_count + 0.5;
 	}
-	
+<!-- function to count for covid and cold!-->
+<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
 	function coldcovidAdd() { 
 		covid_count = covid_count + 0.5;
 		cold_count = cold_count + 0.5;
 	}
-	
+<!-- function to count for covid and flu!-->
+<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
 	function flucovidAdd() { 
 		flu_count = flu_count + 0.5;
 		covid_count = covid_count + 0.5;
 	}
-	
+<!-- function to count for cold and flu!-->
+<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
 	function coldfluAdd() { 
 		cold_count = cold_count + 0.5;
 		flu_count = flu_count + 0.5;
@@ -99,16 +108,20 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+<!-- I copied the above function and created one for a covid count that added one point to the count if selected !-->
 	
 	 function covidAdd(){
             covid_count = covid_count + 1;
         }
-	
+<!-- I copied the above function and created one for a flu count that added one point to the count if selected !-->	
          function fluAdd(){
             flu_count = flu_count + 1;
         }
-	
-        function setResults(){
+<!-- I added two more var functions to the setResults to calculate for the flu and covid percentatges!-->	
+<!-- I set the calculations to divide the total counts by 11 since there are 11 questions in the survey !-->
+<!-- In the output of the results, I added two more rows of text that output the percentages for covid and the flu. I did this by copying the existing code and modifying the text and line breaks !-->
+ <!-- The results page was not displaying covid or flu results, so I had to compare this section to the App 4 code. I fixed some spacing and formatting issues and was able to display the results properly !-->
+	function setResults(){
         	var resultText = document.getElementById("results");
         	var allergyPercent = allergy_count / 11.0 * 100;
         	var coldPercent = cold_count / 11.0 * 100;
@@ -118,11 +131,8 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
         }
 
   </script>
+<!-- I deleted the style code (image dimensions etc.) for the image on the website. I also deleted the comments associated with it  !-->
 
-<!-- Had to add the resize option to make sure that the image fit different platforms (phone vs computer) !-->
-<!-- tested out the website on the computer and it worked!-->
-<!-- tested out the website on my phone and the image wasn't properly sized !-->
-<!-- changed the image proportions multiple times until the image looked good on my phone!-->
 <style>	
 .body {
      margin: 0em;
@@ -142,14 +152,13 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
   .page:target {
     left: 0vw;
     z-index: 1;
-}
-img, object{
-	max-height:80%;
-	max-width:80%;
+
 }
 
 </style>
-
+<!-- I changed the title of the website to "Allergies, Cold, Flu, or COVID-19?" !-->
+<!-- I changed the brief description of the website that was found under the title !-->
+<!-- I deleted the part of the code that inserted the image onto the page because I no longer needed it.  !-->
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Allergies, Cold, Flu, or COVID-19?</h1>
@@ -163,12 +172,11 @@ img, object{
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-<img src="https://www.choc.org/wp/wp-content/uploads/2014/12/Oct-stomachaches.jpg"
-     alt="appendicitis" width400 height400>
+
 	
-<!-- changed the question to ask "How long have you had symptoms?" !-->
-<!-- Added two more buttons and assigned responses to each button that correspond with the illness !-->
-<!-- Renamed the responses to add to their respective categories (cold, allergy, flu etc.) !-->
+<!-- changed the question to ask a question from the symptom chart that was provided !-->
+<!-- Added more buttons based on the number of possible answers, and renamed the buttons to match the answers from the provided chart.  !-->
+<!-- I assigned functions to the buttons that added the correct points to the diagnoses counts if they were clicked (these functions are listed above) !-->
 <!-- committed changes and went to see the website, and everything was looking normal/ the buttons worked !-->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -185,8 +193,7 @@ img, object{
     </div>
 </div>
 <!-- followed the same steps as above for question two !-->
-<!-- replaced question 2 templeate with "do you have a fever !-->
-<!-- switched the onclick="coldAdd();" and the onclick="allergyAdd();" to make sure that the responses were calculated correctly based on the question !-->
+	
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -198,14 +205,12 @@ img, object{
       		<a href="#three"  onclick="flucovidAdd();" class="w3-btn w3-black">severe, dry cough</a>
 	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Mild cough</a>
 	
-
+<!-- followed the same steps as above for question three !-->
     </div>
 </div>
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
-<!-- followed the same steps as above for question three !-->
-<!-- replaced question 3 with have you experienced any nausea or vomiting!-->
-<!-- switched the onclick="coldAdd();" and the onclick="allergyAdd();" to make sure that the responses were calculated correctly based on the question !-->
+
 		<h1>Question 3</h1>
 	</div>
 	
@@ -213,12 +218,13 @@ img, object{
 		<p>Are you experiencing shortness of breath?</p>    
 		<a href="#four"  onclick="covidAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#four"  onclick="coldfluallergyAdd();" class="w3-btn w3-black">No</a>
-
+<!-- followed the same steps as above for question four !-->
+<!-- modified the "herf=" code to take the user to page five rather than the results page as was orginally programmed. !-->
     </div>
 </div>
 <div class="page" id="four">
-<!-- followed the same steps as above for question four !-->
-<!-- replaced question 4 with "does the pain get worse when you jump" !-->
+
+
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -227,9 +233,9 @@ img, object{
 		<p>Are you sneezing?</p>    
 		<a href="#five"  onclick="flucovidAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#five"  onclick="allergycoldAdd();" class="w3-btn w3-black">No</a>
-<!-- calculated the percentages and made sure that my results were displaying properly and that the proper results percentages were being calculated !-->
-<!-- tested the website on the file that I had saved in order to make sure that it was working properly and the right numbers were being calculated !-->
-	    
+<!-- Added divisions and 7 new pages to ask the remaining questions !-->
+<!-- renamed all of the page IDs and changed all of the page titles to display the appropriate question number !-->
+<!-- folllowed the steps above for question five. !-->	    
     </div>
 </div>
 	
@@ -245,7 +251,7 @@ img, object{
 
     </div>
 </div>
-	
+<!-- Followed the steps above for question 6 !-->
 <div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
@@ -258,7 +264,7 @@ img, object{
 
     </div>
 </div>	
-	
+<!-- Followed the steps above for question 7 !-->
 <div class="page" id="seven">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 7</h1>
@@ -272,7 +278,8 @@ img, object{
 
     </div>
 </div>	
-	
+<!-- Followed the steps above for question 8 !-->
+<!-- I had to come back and delete an answer choice from this question that drew on the allergycoldcovidAdd() function if clicked because it was a repetition of a previous answer choice. !-->
 <div class="page" id="eight">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 8</h1>
@@ -285,6 +292,7 @@ img, object{
 
     </div>
 </div>
+<!-- Followed the steps above for question 9 !-->
 <div class="page" id="nine">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 9</h1>
@@ -298,7 +306,7 @@ img, object{
 
     </div>
 </div>
-	
+<!-- Followed the steps above for question 10 !-->	
 <div class="page" id="ten">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 10</h1>
@@ -312,7 +320,8 @@ img, object{
 	   
     </div>
 </div>
-	
+<!-- Followed the steps above for question 11 !-->
+<!-- I committed these changes and went to check the website, and the results were not displaying propoerly, so I had to go back and fix the code for the results function.  !-->
 <div class="page" id="eleven">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 11</h1>
@@ -342,7 +351,7 @@ img, object{
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
-
+<!-- Followed the steps above for question 7 !-->
 	   
    </body>
 </html>
