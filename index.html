@@ -44,52 +44,52 @@ Trying to get the image to resize. Trying to get the results to pop up as a page
 	
 	
 	function coldflucovidAdd() {
-		cold_count =+ 1; 
-		flu_count =+ 1;
-		covid_count =+ 1;
+		cold_count =+ 0.33; 
+		flu_count =+ 0.33;
+		covid_count =+ 0.33;
 	}
 	
 	function allergycoldcovidAdd() {
-		cold_count =+ 1; 
-		allergy_count =+ 1;
-		covid_count =+ 1;
+		cold_count =+ 0.33; 
+		allergy_count =+ 0.33;
+		covid_count =+ 0.33;
 	}
 	
 	function coldfluallergyAdd() {
-		cold_count =+ 1; 
-		flu_count =+ 1;
-		allergy_count =+ 1;
+		cold_count =+ 0.33; 
+		flu_count =+ 0.33;
+		allergy_count =+ 0.33;
 	}
 	
 	function allergyflucovidAdd() { 
-		flu_count =+ 1;
-		covid_count =+ 1;
-		allergy_count =+ 1;
+		flu_count =+ 0.33;
+		covid_count =+ 0.33;
+		allergy_count =+ 0.33;
 	}
 	
 	function allergycoldAdd() { 
-		allergy_count =+ 1;
-		cold_count =+ 1;
+		allergy_count =+ 0.5;
+		cold_count =+ 0.5;
 	}
 	
 	function allergycovidAdd() { 
-		allergy_count =+ 1;
-		covid_count =+ 1;
+		allergy_count =+ 0.5;
+		covid_count =+ 0.5;
 	}
 	
 	function coldcovidAdd() { 
-		covid_count =+ 1;
-		cold_count =+ 1;
+		covid_count =+ 0.5;
+		cold_count =+ 0.5;
 	}
 	
 	function flucovidAdd() { 
-		flu_count =+ 1;
-		covid_count =+ 1;
+		flu_count =+ 0.5;
+		covid_count =+ 0.5;
 	}
 	
 	function coldfluAdd() { 
-		cold_count =+ 1;
-		flu_count =+ 1;
+		cold_count =+ 0.5;
+		flu_count =+ 0.5;
 	}
 	
         function allergyAdd(){
@@ -225,8 +225,8 @@ img, object{
 	
     <div id="content" class="w3-container">
 		<p>Are you sneezing?</p>    
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#five"  onclick="flucovidAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#five"  onclick="allergycoldAdd();" class="w3-btn w3-black">No</a>
 <!-- calculated the percentages and made sure that my results were displaying properly and that the proper results percentages were being calculated !-->
 <!-- tested the website on the file that I had saved in order to make sure that it was working properly and the right numbers were being calculated !-->
 	    
@@ -295,7 +295,7 @@ img, object{
     <div id="content" class="w3-container">
 		<p>Do you get headaches? If so, are they persistent?</p>    
 		<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-black"> Yes, persistent</a>
-        <a href="#ten"  onclick="coldcovidAdd();" class="w3-btn w3-black">Yes, not persistent</a>
+        <a href="#ten"  onclick="allergycovidAdd();" class="w3-btn w3-black">Yes, not persistent</a>
 	     <a href="#ten"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
     </div>
