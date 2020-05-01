@@ -36,68 +36,67 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
 <!-- changed the title from Hello World to "Allergies, Cold, Flu, or COVID-19" !-->
 <!-- Created a Copy of the App 4 repository and renamed it App 7 !-->
 <!-- Added two more Var functions below: one for flu count and one for covid count and set them both to 0 !-->
-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
 	var flu_count = 0; 
 	var covid_count = 0;
 
-<!-- Added functions that add to the initial counts for answer choices that are linked to multiple diagnoses !-->	
-<!-- function to count for cold, flu, and covid !-->
-<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->
+// Added functions that add to the initial counts for answer choices that are linked to multiple diagnoses 	
+// function to count for cold, flu, and covid !-->
+// I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->
 	function coldflucovidAdd() {
 		cold_count = cold_count + 0.33; 
 		flu_count = flu_count + 0.33;
 		covid_count = covid_count + 0.33;
 	}
-<!-- function to count for cold, allergy, and covid !-->
-<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->
+// function to count for cold, allergy, and covid !-->
+// I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->
 	function allergycoldcovidAdd() {
 		cold_count = cold_count + 0.33; 
 		allergy_count = allergy_count + 0.33;
 		covid_count = covid_count + 0.33;
 	}
-<!-- function to count for cold, flu, and allergy !-->
-<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->	
+// function to count for cold, flu, and allergy !-->
+// I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->	
 	function coldfluallergyAdd() {
 		cold_count = cold_count + 0.33; 
 		flu_count = flu_count + 0.33;
 		allergy_count = allergy_count + 0.33;
 	}
-<!-- function to count for flu, allergy, and covid !-->
-<!-- I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->	
+// function to count for flu, allergy, and covid !-->
+// I set each of these values to add 0.33 points to each count because one answer could lead to any of these three diagnoses !-->	
 	function allergyflucovidAdd() { 
 		flu_count = flu_count + 0.33;
 		covid_count = covid_count + 0.33;
 		allergy_count = allergy_count + 0.33;
 	}
-<!-- function to count for cold and allergy!-->
-<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->	
+// function to count for cold and allergy!-->
+// I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->	
 	function allergycoldAdd() { 
 		allergy_count = allergy_court + 0.5;
 		cold_count = cold_count + 0.5;
 	}
-<!-- function to count for covid and allergy!-->
-<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->		
+// function to count for covid and allergy!-->
+// I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->		
 	function allergycovidAdd() { 
 		allergy_count = allergy_count + 0.5;
 		covid_count = covid_count + 0.5;
 	}
-<!-- function to count for covid and cold!-->
-<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
+// function to count for covid and cold!-->
+// I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
 	function coldcovidAdd() { 
 		covid_count = covid_count + 0.5;
 		cold_count = cold_count + 0.5;
 	}
-<!-- function to count for covid and flu!-->
-<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
+// function to count for covid and flu!-->
+// I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
 	function flucovidAdd() { 
 		flu_count = flu_count + 0.5;
 		covid_count = covid_count + 0.5;
 	}
-<!-- function to count for cold and flu!-->
-<!-- I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
+// function to count for cold and flu!-->
+// I set each of these values to add 0.5 points to each count because one answer could lead to either of these two diagnoses !-->			
 	function coldfluAdd() { 
 		cold_count = cold_count + 0.5;
 		flu_count = flu_count + 0.5;
@@ -110,19 +109,19 @@ Rounding the results values to the nearest whole number. Inserting the pie chart
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-<!-- I copied the above function and created one for a covid count that added one point to the count if selected !-->
+// I copied the above function and created one for a covid count that added one point to the count if selected !-->
 	
 	 function covidAdd(){
             covid_count = covid_count + 1;
         }
-<!-- I copied the above function and created one for a flu count that added one point to the count if selected !-->	
+// I copied the above function and created one for a flu count that added one point to the count if selected !-->	
          function fluAdd(){
             flu_count = flu_count + 1;
         }
-<!-- I added two more var functions to the setResults to calculate for the flu and covid percentatges!-->	
-<!-- I set the calculations to divide the total counts by 11 since there are 11 questions in the survey !-->
-<!-- In the output of the results, I added two more rows of text that output the percentages for covid and the flu. I did this by copying the existing code and modifying the text and line breaks !-->
- <!-- The results page was not displaying covid or flu results, so I had to compare this section to the App 4 code. I fixed some spacing and formatting issues and was able to display the results properly !-->
+// I added two more var functions to the setResults to calculate for the flu and covid percentatges!-->	
+// I set the calculations to divide the total counts by 11 since there are 11 questions in the survey !-->
+// In the output of the results, I added two more rows of text that output the percentages for covid and the flu. I did this by copying the existing code and modifying the text and line breaks !-->
+// The results page was not displaying covid or flu results, so I had to compare this section to the App 4 code. I fixed some spacing and formatting issues and was able to display the results properly !-->
 	function setResults(){
         	var resultText = document.getElementById("results");
         	var allergyPercent = allergy_count / 11.0 * 100;
